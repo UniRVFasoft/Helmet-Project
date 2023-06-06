@@ -1,0 +1,42 @@
+<section>
+    <div class="navigation-container">
+        <div class="navigation">
+            <div class="menu-container-pic">
+                <div class="container-title">Menu</div>
+                <div>
+                    <img src="/assets/profile.svg" alt="">
+                </div>
+            </div>
+
+            <div class="container-menu">
+                <div class="option-menu-container" routerLinkActive="selected">
+                    <i class="fa-solid fa-user"></i>
+                    <a  routerLink="/clientes" >Clientes</a>
+                </div>
+                <div class="option-menu-container" routerLinkActive="selected">
+                    <i class="fa-solid fa-users"></i>
+                    <a  routerLink="/tarefa">Tarefas</a>
+                </div>
+                <div class="option-menu-container" routerLinkActive="selected">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <a  routerLink="/pedidos" >Pedidos</a>
+                </div>
+                <div class="option-menu-container" routerLinkActive="selected">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <a  routerLink="/relatorios">Relatorios</a>
+                </div>
+                <div class="option-menu-container" routerLinkActive="selected">
+                    <i class="fa-solid fa-gear"></i>
+                    <a  routerLink="/configuration">Configurações</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-content">
+        <router-outlet></router-outlet>
+    </div>
+</section>
+

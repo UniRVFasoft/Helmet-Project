@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">Login</span>
+      <form  #form>
+        <div class="input-field">
+          <input id="username" type="text" [(ngModel)]="username">
+          <label for="username">Username</label>
+        </div>
+        <div class="input-field">
+          <input id="password" type="password" [(ngModel)]="password">
+          <label for="password">Password</label>
+        </div>
+        <button class="btn waves-effect waves-light" (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

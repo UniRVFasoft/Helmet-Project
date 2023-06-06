@@ -1,0 +1,86 @@
+.navigation-container{
+    width: 20%;
+    height: 100vh;
+    background-color: #0F172A;
+}
+
+.option-menu-container{
+    width: 100%;
+    height: 2.5rem;
+    margin:.2rem 0;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.menu-container-pic{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.menu-container-pic img{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 6rem;
+}
+
+.option-menu-container i{
+    padding-right: .3rem;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.container-title{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    color: wheat;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-title a:hover{
+   width: 100%;
+   height: 2rem;
+   background-color: aliceblue;
+   color: black;
+}
+
+.container-menu{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-menu  a{
+    padding: 1rem 0;
+    text-decoration: none;
+    color: white;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.container-content{
+    padding: 2rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.selected{
+    background-color: #556280;
+    color: white;
+}

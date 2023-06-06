@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.selected {
+  color: red;
+  font-weight: bold;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.snackbar-success {
+  background-color: green;
+  color: white;
+}
+
+.snackbar-error {
+  background-color: red;
+  color: white;
+}
+
+

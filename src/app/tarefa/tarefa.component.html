@@ -1,0 +1,109 @@
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+  <mat-tab label="Listagem de clientes">
+    <section>
+      <h1> Tarefas no sistema</h1>
+      <div class="card-container">
+        <div *ngFor="let tarefa of tarefas ;let i = index" class="card">
+          <div class="card-header">
+            <h3 class="card-title">{{ tarefa.titulo }}</h3>
+
+          </div>
+          <div class="card-body">
+            <p><b>Descrição: </b> {{ tarefa.descricao }}</p>
+            <p><b>Cliente: </b> {{ tarefa.cliente.nome }}</p>
+            <p><b>Status: </b> {{ tarefa.descricao }}</p>
+            <p><b>Vencimento: </b> {{tarefa.data_vencimento}}</p>
+          </div>
+          <div class="card-footer">
+            <button mat-icon-button color="primary" (click)="editarTarefa(tarefa)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="excluirTarefa(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </mat-tab>
+  <mat-tab label="Cadastro de tarefas">
+    <form [formGroup]="form">
+      <div class="container-tarefa">
+        <h1>Cadastre uma Tarefa</h1>
+        <div class="container-basic">
+          <div class="input-style" formGroupName="tarefa">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Titulo</mat-label>
+              <input matInput placeholder="titulo tarefa" formControlName="titulo">
+              <mat-error>O campo Titulo é obrigatorio</mat-error>
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="container-basic">
+          <div class="input-style" formGroupName="tarefa">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Descrição</mat-label>
+              <input matInput placeholder="Descrição tarefa" formControlName="descricao">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Descrição não pode ser nula</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="container-basic-info">
+          <div class="input-style" formGroupName="tarefa">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Cliente</mat-label>
+              <mat-select formControlName="cliente" name="cliente">
+                <mat-option *ngFor="let client of clientes;let i = index" [value]="client">
+                  {{client.nome}}
+                </mat-option>
+              </mat-select>
+              <mat-error>Cliente não pode ser nulo</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="input-style" formGroupName="tarefa">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Data vencimento</mat-label>
+              <input matInput placeholder="12/06/2023" formControlName="data_vencimento" maxlength="10">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Data vencimento não pode ser nulo</mat-error>
+            </mat-form-field>
+
+          </div>
+          <div class="input-style" formGroupName="tarefa">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Status</mat-label>
+              <mat-select formControlName="status" name="status">
+                <mat-option *ngFor="let item of status;let i = index" [value]="item">
+                  {{item}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+
+    <div class="container-btn">
+      <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="save(form)"
+              style="font-family: 'Poppins', sans-serif">{{label}}</button>
+    </div>
+  </mat-tab>
+
+
+
+</mat-tab-group>
+
+
+
+
+
+
+
+

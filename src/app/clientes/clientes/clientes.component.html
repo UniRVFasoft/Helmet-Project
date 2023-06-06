@@ -1,0 +1,131 @@
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+  <mat-tab label="Listagem de clientes">
+    <section>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>No.</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Cidade</th>
+          <th>Estado</th>
+          <th>Telefone</th>
+          <th>Biografia</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of clientes; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.nome }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.cidade }}</td>
+          <td>{{ item.estado }}</td>
+          <td>{{ item.telefone }}</td>
+          <td>{{ item.biografia }}</td>
+          <td>
+            <button mat-icon-button color="primary" (click)="forEditClientePage(i)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="excluirCliente(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+
+        <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
+
+    </section>
+  </mat-tab>
+  <mat-tab label="Cadastro de clientes">
+    <form [formGroup]="form">
+      <div>
+        <div class="container-basic">
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Nome</mat-label>
+              <input matInput placeholder="Nome completo" formControlName="nome">
+              <mat-error>O campo nome é obrigatorio</mat-error>
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="emailexample@email.com" formControlName="email">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>O email deve ser valido</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="container-basic">
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Cidade</mat-label>
+              <input matInput placeholder="Cidade completa" formControlName="cidade">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Cidade não pode ser nula</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Estado</mat-label>
+              <input matInput placeholder="Estado" formControlName="estado">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Estado não pode ser nulo</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="container-basic">
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Telefone</mat-label>
+              <input matInput placeholder="Telefone" formControlName="telefone">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Telefone não pode ser nulo</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline">
+              <mat-label>Teste</mat-label>
+              <input matInput placeholder="Teste" formControlName="teste">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Teste não pode ser nulo</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="container-basic biografia">
+          <div class="input-style" formGroupName="cliente">
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Biografia</mat-label>
+              <textarea matInput placeholder="Fale um pouco sobre você" formControlName="biografia"></textarea>
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-error>Biografia não pode ser nulo</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+
+    <div class="container-btn">
+      <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="save(form)"
+              style="font-family: 'Poppins', sans-serif">{{label}}</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+
+
+
+
+
