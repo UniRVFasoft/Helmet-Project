@@ -6,28 +6,43 @@
                 <div>
                     <img src="/assets/profile.svg" alt="">
                 </div>
+              <small>{{userView.nome}}</small>
             </div>
 
             <div class="container-menu">
                 <div class="option-menu-container" routerLinkActive="selected">
-                    <i class="fa-solid fa-user"></i>
-                    <a  routerLink="/clientes" >Clientes</a>
+
+                    <a  routerLink="/clientes" class="container-list" >
+                      <i class="fa-solid fa-user"></i>
+                      <p>Clientes</p>
+                    </a>
                 </div>
                 <div class="option-menu-container" routerLinkActive="selected">
-                    <i class="fa-solid fa-users"></i>
-                    <a  routerLink="/tarefa">Tarefas</a>
+
+                    <a  routerLink="/tarefa"  class="container-list" >
+                      <i class="fa-solid fa-users"></i>
+                      <p>Tarefas</p>
+                    </a>
                 </div>
                 <div class="option-menu-container" routerLinkActive="selected">
-                    <i class="fa-solid fa-chart-simple"></i>
-                    <a  routerLink="/pedidos" >Pedidos</a>
+
+                    <a  routerLink="/pedidos" class="container-list">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p>Pedidos</p>
+                    </a>
                 </div>
                 <div class="option-menu-container" routerLinkActive="selected">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <a  routerLink="/relatorios">Relatorios</a>
+                    <a  routerLink="/relatorios" class="container-list">
+                      <i class="fa-solid fa-file-pdf"></i>
+                      <p>Relatorios</p>
+
+                    </a>
                 </div>
                 <div class="option-menu-container" routerLinkActive="selected">
-                    <i class="fa-solid fa-gear"></i>
-                    <a  routerLink="/configuration">Configurações</a>
+                    <a  routerLink="/configuration" class="container-list">
+                      <i class="fa-solid fa-gear"></i>
+                      <p>Configurações</p>
+                    </a>
                 </div>
             </div>
         </div>

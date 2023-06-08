@@ -1,0 +1,16 @@
+.welcome-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.welcome-avatar {
+  width: 150px;
+  height: 150px;
+  background-image: url('/assets/profile.svg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+
+}

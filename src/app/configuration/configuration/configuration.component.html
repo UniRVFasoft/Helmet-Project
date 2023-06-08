@@ -1,1 +1,34 @@
-<p>configuration works!</p>
+
+<section>
+  <div class="menu-container-pic">
+    <div class="container-title">Menu</div>
+    <div>
+      <img src="/assets/profile.svg" alt="">
+    </div>
+    <small>Owner</small>
+  </div>
+  <form [formGroup]="form">
+    <div class="container-basic">
+      <div class="input-style" formGroupName="updateUser">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>E-mail</mat-label>
+          <input matInput placeholder="meuemailexample@email.com" formControlName="email">
+          <mat-error>O campo email é obrigatorio</mat-error>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="input-style" formGroupName="updateUser">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Senha</mat-label>
+          <input matInput placeholder="********" formControlName="senha">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error>Senha deve ser maior que 5 cacteres</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+  <div class="container-btn">
+    <button mat-raised-button color="primary"
+            style="font-family: 'Poppins', sans-serif">Atualizar</button>
+  </div>
+</section>

@@ -28,6 +28,7 @@ import {TarefaComponent} from "./tarefa/tarefa.component";
 import {ProdutosComponent} from './produtos/produtos.component';
 import {MatSelectModule} from "@angular/material/select";
 import {LoginComponent} from './login/login.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -45,27 +46,28 @@ import {LoginComponent} from './login/login.component';
     ProdutosComponent,
     LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    RoutingModule,
-    CommonModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatSnackBarModule,
-    MatIconModule,
-    MatTabsModule,
-    MatRadioModule,
-    FormsModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatTableModule,
-    MatSelectModule,
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSlideToggleModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        RoutingModule,
+        CommonModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatSnackBarModule,
+        MatIconModule,
+        MatTabsModule,
+        MatRadioModule,
+        FormsModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        MatTableModule,
+        MatSelectModule,
+        MatCardModule,
+    ],
   providers: [
     ClientesComponent
   ],
