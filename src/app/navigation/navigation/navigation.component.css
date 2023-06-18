@@ -4,6 +4,42 @@
     background-color: #0F172A;
 }
 
+.left {
+
+  height: 2rem;
+  margin-top: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+button{
+  padding: .4rem 1rem ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:hover{
+ color: #9e9e9e;
+}
+
+p{
+  color: white;
+  margin: 0;
+  padding-left: .3rem;
+}
+
+i{
+  color: white;
+}
+
+
 .option-menu-container{
     width: 100%;
     height: 2.5rem;

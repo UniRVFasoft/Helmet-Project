@@ -1,5 +1,5 @@
 import {Component, DoCheck, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MatTabGroup} from "@angular/material/tabs";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
@@ -45,25 +45,36 @@ export class ClientesComponent implements OnInit, DoCheck {
     this.updateCliente = {nome: "", email: "", cidade: "", estado: "", telefone: "", biografia: ""}
     this.form = this.formBuilder.group({
       cliente: this.formBuilder.group({
-        nome: [''],
-        email: [''],
-        cidade: [''],
-        estado: [''],
-        telefone: [''],
-        teste: [''],
-        biografia: ['']
+        nome: ["",Validators.required],
+        email: ["",Validators.required],
+        cidade: ["",Validators.required],
+        estado: ["",Validators.required],
+        telefone: ["",Validators.required],
+        teste: ["",Validators.required],
+        biografia: ["",Validators.required]
       })
     });
   }
 
   clearInput() {
-    this.form.get('cliente.nome')?.setValue('');
-    this.form.get('cliente.email')?.setValue('');
-    this.form.get('cliente.cidade')?.setValue('');
-    this.form.get('cliente.estado')?.setValue('');
-    this.form.get('cliente.telefone')?.setValue('');
-    this.form.get('cliente.teste')?.setValue('');
-    this.form.get('cliente.biografia')?.setValue('');
+    // this.form.get('cliente.nome')?.setValue('');
+    // this.form.get('cliente.email')?.setValue('');
+    // this.form.get('cliente.cidade')?.setValue('');
+    // this.form.get('cliente.estado')?.setValue('');
+    // this.form.get('cliente.telefone')?.setValue('');
+    // this.form.get('cliente.teste')?.setValue('');
+    // this.form.get('cliente.biografia')?.setValue('');
+    this.form = this.formBuilder.group({
+      cliente: this.formBuilder.group({
+        nome: ["",Validators.required],
+        email: ["",Validators.required],
+        cidade: ["",Validators.required],
+        estado: ["",Validators.required],
+        telefone: ["",Validators.required],
+        teste: ["",Validators.required],
+        biografia: ["",Validators.required]
+      })
+    });
   }
 
 

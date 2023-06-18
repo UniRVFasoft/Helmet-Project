@@ -1,18 +1,42 @@
-<div class="container">
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title">Login</span>
-      <form  #form>
-        <div class="input-field">
-          <input id="username" type="text" [(ngModel)]="username">
-          <label for="username">Username</label>
-        </div>
-        <div class="input-field">
-          <input id="password" type="password" [(ngModel)]="password">
-          <label for="password">Password</label>
-        </div>
-        <button class="btn waves-effect waves-light" (click)="login()">Login</button>
-      </form>
-    </div>
+
+
+<section>
+  <div class="component">
+    <mat-card>
+      <h3>Bem vindo ao Helmet !</h3>
+      <mat-card-title>Login</mat-card-title>
+        <form [formGroup]="form">
+          <div class="container-basic">
+            <div class="input-style" formGroupName="login">
+              <mat-form-field  style="width: 100%">
+                <mat-label>E-mail</mat-label>
+                <input matInput placeholder="seuemail@email.com" type="text" formControlName="email">
+                <mat-error>O campo email é obrigatorio</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="input-style" formGroupName="login">
+              <mat-form-field  style="width: 100%;">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" formControlName="password">
+                <mat-error>A senha deve ser valida</mat-error>
+              </mat-form-field>
+            </div>
+            <div >
+              <button (click)="login(form)" type="submit" mat-button color="primary">Entrar</button>
+            </div>
+
+            <div class="error-message" *ngIf="hasAccess">
+              Acesso negado. Usuário não encontrado.
+            </div>
+
+
+          </div>
+
+
+
+        </form>
+
+    </mat-card>
   </div>
-</div>
+
+</section>

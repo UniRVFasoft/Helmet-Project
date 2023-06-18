@@ -6,6 +6,10 @@ import {PedidosComponent} from './pedidos/pedidos/pedidos.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {TarefaComponent} from "./tarefa/tarefa.component";
 import {LoginComponent} from "./login/login.component";
+import {RouteComponent} from "./route/route.component";
+import {AppComponent} from "./app.component";
+import {NavigationComponent} from "./navigation/navigation/navigation.component";
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
 
@@ -16,10 +20,45 @@ const routes: Routes = [
   //<a href="#">Configurações</a>
 
   //home
+  // {
+  //   path: '',
+  //   component: LoginComponent
+  // },
+  // {
+  //   path: 'clientes',
+  //   component: ClientesComponent
+  // },
+  // {
+  //   path: 'tarefa',
+  //   component: TarefaComponent
+  // },
+  // {
+  //   path: 'relatorios',
+  //   component: RelatoriosComponent
+  // },
+  // {
+  //   path: 'configuration',
+  //   component: ConfigurationComponent
+  // },
+  // {
+  //   path: 'pedidos',
+  //   component: PedidosComponent
+  // },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  // },
+  // {
+  //   path: 'route',
+  //   component: ClientesComponent
+  // }
+
+  // Rota de login
   {
     path: '',
-    component: WelcomeComponent
+    component: LoginComponent
   },
+  // Outras rotas do sistema
   {
     path: 'clientes',
     component: ClientesComponent
@@ -39,7 +78,13 @@ const routes: Routes = [
   {
     path: 'pedidos',
     component: PedidosComponent
+  },
+  {
+    path: 'navigation',
+    component: NavigationComponent
   }
+
+
 
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

@@ -11,11 +11,17 @@ export class NavigationComponent implements OnInit {
   userView: User
 
   constructor(private app: AppComponent) {
-    this.userView = {}
+    this.userView = this.app.getUser()
   }
 
   ngOnInit() {
-    this.userView = this.app.getUser()
+    this.app.userObservable.subscribe((user: User) => {
+      console.log('Usuário alterado:', user);
+      this.userView = this.app.getUser()
+    });
+
   }
+
+
 
 }

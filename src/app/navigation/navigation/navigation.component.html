@@ -4,7 +4,7 @@
             <div class="menu-container-pic">
                 <div class="container-title">Menu</div>
                 <div>
-                    <img src="/assets/profile.svg" alt="">
+                    <img [src]="userView.avatar" alt="">
                 </div>
               <small>{{userView.nome}}</small>
             </div>
@@ -46,6 +46,13 @@
                 </div>
             </div>
         </div>
+      <div class="left">
+        <button>
+          <i class="fa-solid fa-arrow-left"></i>
+          <p>Sair</p>
+        </button>
+
+      </div>
 
     </div>
 

@@ -29,6 +29,8 @@ import {ProdutosComponent} from './produtos/produtos.component';
 import {MatSelectModule} from "@angular/material/select";
 import {LoginComponent} from './login/login.component';
 import {MatCardModule} from "@angular/material/card";
+import { RouteComponent } from './route/route.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import {MatCardModule} from "@angular/material/card";
     WelcomeComponent,
     TarefaComponent,
     ProdutosComponent,
-    LoginComponent
+    LoginComponent,
+    RouteComponent,
+    HomeComponent
   ],
     imports: [
         BrowserModule,
