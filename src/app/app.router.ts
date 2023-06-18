@@ -10,6 +10,7 @@ import {RouteComponent} from "./route/route.component";
 import {AppComponent} from "./app.component";
 import {NavigationComponent} from "./navigation/navigation/navigation.component";
 import {HomeComponent} from "./home/home.component";
+import {NavbarComponent} from "./navbar/navbar/navbar.component";
 
 const routes: Routes = [
 
@@ -59,31 +60,41 @@ const routes: Routes = [
     component: LoginComponent
   },
   // Outras rotas do sistema
-  {
-    path: 'clientes',
-    component: ClientesComponent
-  },
-  {
-    path: 'tarefa',
-    component: TarefaComponent
-  },
-  {
-    path: 'relatorios',
-    component: RelatoriosComponent
-  },
-  {
-    path: 'configuration',
-    component: ConfigurationComponent
-  },
-  {
-    path: 'pedidos',
-    component: PedidosComponent
-  },
-  {
-    path: 'navigation',
-    component: NavigationComponent
-  }
 
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      {
+        path: 'clientes',
+        component: ClientesComponent
+      },
+      {
+        path: 'tarefa',
+        component: TarefaComponent
+      },
+      {
+        path: 'relatorios',
+        component: RelatoriosComponent
+      },
+      {
+        path: 'configuration',
+        component: ConfigurationComponent
+      },
+      {
+        path: 'pedidos',
+        component: PedidosComponent
+      },
+      {
+        path: 'welcome',
+        component: WelcomeComponent
+      },
+      {
+        path: 'navbar',
+        component: NavbarComponent
+      }
+    ]
+  }
 
 
 ];

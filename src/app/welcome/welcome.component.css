@@ -6,11 +6,25 @@
 }
 
 .welcome-avatar {
-  width: 150px;
-  height: 150px;
-  background-image: url('/src/assets/profile-female.svg');
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+}
+
+.menu-container-pic{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
 }
+
+.menu-container-pic img{
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 6rem;
+}
+

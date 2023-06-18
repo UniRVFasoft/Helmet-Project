@@ -39,9 +39,11 @@ export class LoginComponent {
     const data = new SensitiveData();
     if (form.value.login.email === data.email && form.value.login.password === data.password) {
       console.log("Sim, os dados correspondem");
-      this.router.navigate(['/home']); // Redirecionar para a rota '/clientes' (ou qualquer outra rota do sistema)
+      this.router.navigate(['/home/welcome']);
+      this.hasAccess = false
     } else {
       console.log("Os dados não correspondem");
+      this.hasAccess = true
     }
   }
 }
