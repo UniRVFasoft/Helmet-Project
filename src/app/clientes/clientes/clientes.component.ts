@@ -2,15 +2,15 @@ import {Component, DoCheck, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MatTabGroup} from "@angular/material/tabs";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {MockService} from "../../mock.service";
+import {Status, Tarefa} from "../../models/tarefa.models";
+import {Cliente} from "../../models/cliente.models";
 
 
-export interface Cliente {
-  nome: string;
-  email: string;
-  cidade: string;
-  estado: string;
-  telefone: string;
-  biografia: string;
+
+export interface Estados {
+  nome: string,
+  sigla: string
 }
 
 
@@ -22,8 +22,8 @@ export interface Cliente {
 export class ClientesComponent implements OnInit, DoCheck {
 
 
-   clientes: Array<Cliente> = JSON.parse(localStorage.getItem("list") || '[]');
-  //
+  clientes: Array<Cliente> = JSON.parse(localStorage.getItem("list") || '[]');
+
 
   label: string = "Salvar"
 
@@ -35,52 +35,113 @@ export class ClientesComponent implements OnInit, DoCheck {
   @ViewChild(MatTabGroup) tabGroup!: MatTabGroup;
   novoCliente: boolean = true;
   editCliente: boolean = false;
+  estados: Array<Estados> = [];
 
 
   ngDoCheck() {
-    this.setLocalStorage()
+    this.updateLocalStorage();
   }
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private service: MockService) {
     this.updateCliente = {nome: "", email: "", cidade: "", estado: "", telefone: "", biografia: ""}
     this.form = this.formBuilder.group({
       cliente: this.formBuilder.group({
-        nome: ["",Validators.required],
-        email: ["",Validators.required],
-        cidade: ["",Validators.required],
-        estado: ["",Validators.required],
-        telefone: ["",Validators.required],
-        teste: ["",Validators.required],
-        biografia: ["",Validators.required]
+        nome: ["", Validators.required],
+        email: ["", Validators.required],
+        cidade: ["", Validators.required],
+        estado: ["", Validators.required],
+        telefone: ["", Validators.required],
+        cep: ["", Validators.required],
+        biografia: ["", Validators.required]
       })
     });
   }
 
+
+
+  initializeClientes() {
+    this.clientes = JSON.parse(localStorage.getItem("list") || '[]');
+
+    if (this.clientes.length === 0) {
+      const exemplos = [
+        {
+          nome: "Lalisa Manobal",
+          email: "lalisa_tailandia@email.com",
+          cidade: "Bangkok",
+          estado: "Bangkok",
+          telefone: "+66 88 123 4567",
+          biografia: "Dancer Main",
+        },
+        {
+          nome: "Jisoo Kim",
+          email: "jisoo_blackpink@email.com",
+          cidade: "Coreia",
+          estado: "Coreia",
+          telefone: "+66 88 234 5678",
+          biografia: "Vocalista Principal",
+        },
+        {
+          nome: "Jennie Kim",
+          email: "jennie_blackpink@email.com",
+          cidade: "Coreia",
+          estado: "Coreia",
+          telefone: "+66 88 345 6789",
+          biografia: "Rapper Principal",
+        },
+        {
+          nome: "Rosé Park",
+          email: "rose_blackpink@email.com",
+          cidade: "Coreia",
+          estado: "Coreia",
+          telefone: "+66 88 456 7890",
+          biografia: "Vocalista Principal",
+        }
+      ];
+
+      this.clientes.push(...exemplos);
+      this.updateLocalStorage();
+    }
+  }
+
+
+
   clearInput() {
-    // this.form.get('cliente.nome')?.setValue('');
-    // this.form.get('cliente.email')?.setValue('');
-    // this.form.get('cliente.cidade')?.setValue('');
-    // this.form.get('cliente.estado')?.setValue('');
-    // this.form.get('cliente.telefone')?.setValue('');
-    // this.form.get('cliente.teste')?.setValue('');
-    // this.form.get('cliente.biografia')?.setValue('');
     this.form = this.formBuilder.group({
+
       cliente: this.formBuilder.group({
-        nome: ["",Validators.required],
-        email: ["",Validators.required],
-        cidade: ["",Validators.required],
-        estado: ["",Validators.required],
-        telefone: ["",Validators.required],
-        teste: ["",Validators.required],
-        biografia: ["",Validators.required]
+        nome: ["", Validators.required],
+        email: ["", Validators.required],
+        cidade: ["", Validators.required],
+        estado: ["", Validators.required],
+        telefone: ["", Validators.required],
+        cep: ["", Validators.required],
+        biografia: ["", Validators.required]
       })
     });
+  }
+
+
+  getStates() {
+    this.service.getStates().subscribe(
+      (res: any[]) => {
+        this.estados = res.map(estado => ({
+          nome: estado.nome,
+          sigla: estado.sigla
+        }));
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
 
   ngOnInit() {
     this.updateIndice = -1;
+    this.getStates();
+    this.initializeClientes();
   }
+
 
   loandingClientList(): Cliente[] {
     return this.clientes
@@ -155,6 +216,11 @@ export class ClientesComponent implements OnInit, DoCheck {
   getClientes(): Array<Cliente> {
     return this.clientes
   }
+
+  updateLocalStorage() {
+    localStorage.setItem("list", JSON.stringify(this.clientes));
+  }
+
 
   setLocalStorage() {
     if (this.clientes) {

@@ -1,1 +1,11 @@
-<p>produtos works!</p>
+<div *ngIf="products">
+  <h2>Catálogo de Produtos/Serviços</h2>
+  <div class="container">
+    <div class="product-card" *ngFor="let product of products">
+      <img class="product-image" [src]="product.image" alt="{{ product.name }}">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">Preço: R$ {{ product.price }}</p>
+    </div>
+  </div>
+</div>

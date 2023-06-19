@@ -29,8 +29,11 @@ import {ProdutosComponent} from './produtos/produtos.component';
 import {MatSelectModule} from "@angular/material/select";
 import {LoginComponent} from './login/login.component';
 import {MatCardModule} from "@angular/material/card";
-import { RouteComponent } from './route/route.component';
-import { HomeComponent } from './home/home.component';
+import {RouteComponent} from './route/route.component';
+import {HomeComponent} from './home/home.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MatListModule} from "@angular/material/list";
+
 
 @NgModule({
   declarations: [
@@ -50,28 +53,31 @@ import { HomeComponent } from './home/home.component';
     RouteComponent,
     HomeComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatSlideToggleModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        RoutingModule,
-        CommonModule,
-        MatButtonModule,
-        MatMenuModule,
-        MatSnackBarModule,
-        MatIconModule,
-        MatTabsModule,
-        MatRadioModule,
-        FormsModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatTableModule,
-        MatSelectModule,
-        MatCardModule,
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    RoutingModule,
+    CommonModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatIconModule,
+    MatTabsModule,
+    CommonModule,
+    HttpClientModule,
+    MatRadioModule,
+    FormsModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatSelectModule,
+    MatCardModule,
+    MatListModule,
+  ],
   providers: [
     ClientesComponent
   ],

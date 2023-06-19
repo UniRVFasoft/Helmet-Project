@@ -1,1 +1,57 @@
-<p>relatorios works!</p>
+<!-- report.component.html -->
+<h2>Relatórios</h2>
+
+<div class="report-container">
+  <mat-card>
+    <mat-card-content>
+      <h3 class="report-title">Vendas Mensais</h3>
+      <div class="chart-container">
+      <img src="assets/grafico.png">
+        
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card>
+    <mat-card-content>
+      <h3 class="report-title">Produtos Mais Vendidos</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade Vendida</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of topSellingProducts">
+          <td>{{ product.name }}</td>
+          <td>{{ product.quantity }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>
+      <h3 class="report-title">Clientes Novos</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Data de Cadastro</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of newCustomers">
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.registrationDate | date }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

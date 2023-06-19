@@ -11,6 +11,7 @@ import {AppComponent} from "./app.component";
 import {NavigationComponent} from "./navigation/navigation/navigation.component";
 import {HomeComponent} from "./home/home.component";
 import {NavbarComponent} from "./navbar/navbar/navbar.component";
+import {ProdutosComponent} from "./produtos/produtos.component";
 
 const routes: Routes = [
 
@@ -84,6 +85,10 @@ const routes: Routes = [
       {
         path: 'pedidos',
         component: PedidosComponent
+      },
+      {
+        path: 'produtos',
+        component: ProdutosComponent
       },
       {
         path: 'welcome',
