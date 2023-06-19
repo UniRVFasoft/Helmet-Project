@@ -1,6 +1,6 @@
 # Helmet - Project
 Este projeto utiliza o framework Angular com Material.
-
+Foi utilizado o mockApi para simulação de comunicações de API.
 Login
 email: owner@helmet.com </br> senha: kimano123
 
