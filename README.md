@@ -33,7 +33,7 @@ Relatorios
 Configurações
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/8468158f-1aa1-4f84-957e-85c16a80ac84)
 
-Algumas funcionalidades do sistema de poder escolher nome,avatar e cores 
+Algumas funcionalidades do sistema de poder escolher nome,avatar e cores </br>
 Laranja
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/beecb8a5-7b5c-4a2d-9dd5-1966de377cd7)
 Azul
