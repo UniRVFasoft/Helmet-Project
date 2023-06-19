@@ -12,12 +12,9 @@ import {NavbarComponent} from './navbar/navbar/navbar.component';
 import {NavigationComponent} from './navigation/navigation/navigation.component';
 import {RoutingModule} from './app.router';
 import {ClientesComponent} from './clientes/clientes/clientes.component';
-import {ContatosComponent} from './contatos/contatos/contatos.component';
-import {PedidosComponent} from './pedidos/pedidos/pedidos.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RelatoriosComponent} from './relatorios/relatorios/relatorios.component';
 import {ConfigurationComponent} from './configuration/configuration/configuration.component';
-import {DashboardComponent} from './dashboard/dashboard/dashboard.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
@@ -29,7 +26,6 @@ import {ProdutosComponent} from './produtos/produtos.component';
 import {MatSelectModule} from "@angular/material/select";
 import {LoginComponent} from './login/login.component';
 import {MatCardModule} from "@angular/material/card";
-import {RouteComponent} from './route/route.component';
 import {HomeComponent} from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatListModule} from "@angular/material/list";
@@ -41,16 +37,13 @@ import {MatListModule} from "@angular/material/list";
     NavbarComponent,
     NavigationComponent,
     ClientesComponent,
-    ContatosComponent,
-    PedidosComponent,
     RelatoriosComponent,
     ConfigurationComponent,
-    DashboardComponent,
     WelcomeComponent,
     TarefaComponent,
     ProdutosComponent,
     LoginComponent,
-    RouteComponent,
+
     HomeComponent
   ],
   imports: [
