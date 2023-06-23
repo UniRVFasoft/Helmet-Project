@@ -1,0 +1,29 @@
+#rating-component {
+    text-align: center;
+}
+
+.rating-stars {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: 36px;
+    display: inline-block;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    float: right;
+    color: #ddd;
+    margin-right: 5px;
+}
+
+.rating-stars label:before {
+    content: '\2605';
+}
+
+.rating-stars input:checked ~ label {
+    color: #ffcc00;
+}
+

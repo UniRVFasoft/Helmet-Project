@@ -1,0 +1,22 @@
+<div id="rating-component">
+    <h2>Avalie o site</h2>
+    <div class="rating-stars">
+        <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="selectedRating">
+        <label for="star5"></label>
+        <input type="radio" id="star4" name="rating" value="4" [(ngModel)]="selectedRating">
+        <label for="star4"></label>
+        <input type="radio" id="star3" name="rating" value="3" [(ngModel)]="selectedRating">
+        <label for="star3"></label>
+        <input type="radio" id="star2" name="rating" value="2" [(ngModel)]="selectedRating">
+        <label for="star2"></label>
+        <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="selectedRating">
+        <label for="star1"></label>
+    </div>
+    <button (click)="confirmRating()">Confirmar Avaliação</button>
+    <div id="rating-summary">
+        <div *ngFor="let ratingCount of ratingCounts">
+            {{ ratingCount.rating }} estrelas: {{ ratingCount.count }} avaliações
+        </div>
+    </div>
+</div>
+
