@@ -1,5 +1,5 @@
 <div id="rating-component">
-    <h2>Avalie o site</h2>
+    <h1>Avalie o site</h1>
     <div class="rating-stars">
         <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="selectedRating">
         <label for="star5"></label>
@@ -12,11 +12,18 @@
         <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="selectedRating">
         <label for="star1"></label>
     </div>
-    <button (click)="confirmRating()">Confirmar Avaliação</button>
-    <div id="rating-summary">
-        <div *ngFor="let ratingCount of ratingCounts">
-            {{ ratingCount.rating }} estrelas: {{ ratingCount.count }} avaliações
-        </div>
-    </div>
+    <button  mat-raised-button color="primary" style="font-family: 'Poppins', sans-serif;margin-left: 1rem" (click)="confirmRating()">Confirmar Avaliação</button>
+<!--    <div id="rating-summary">-->
+<!--        <div *ngFor="let ratingCount of ratingCounts">-->
+<!--            {{ ratingCount.rating }} estrelas: {{ ratingCount.count }} avaliações-->
+<!--        </div>-->
+<!--    </div>-->
+
+  <div class="conatiner-avaliation">
+      <div class="avaliation">
+       <p> Avaliação do site:</p>
+        <p>{{avaliation}}</p>
+      </div>
+  </div>
 </div>
 

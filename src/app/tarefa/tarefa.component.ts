@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MatTabGroup} from "@angular/material/tabs";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Status, Tarefa} from "../models/tarefa.models";
@@ -32,11 +32,11 @@ export class TarefaComponent implements OnInit {
     this.selectedStatus = Status.PENDENTE
     this.form = this.formBuilder.group({
       tarefa: this.formBuilder.group({
-        titulo: [''],
-        descricao: [''],
-        data_vencimento: [''],
-        status: [''],
-        cliente: ['']
+        titulo: ['',Validators.required],
+        descricao: ['',Validators.required],
+        data_vencimento: ['',Validators.required],
+        status: ['',Validators.required],
+        cliente: ['',Validators.required]
       })
     });
   }
