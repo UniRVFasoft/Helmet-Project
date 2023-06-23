@@ -9,20 +9,20 @@ export class ProdutosComponent {
 
   products: any[] = [
     {
-      name: 'Notebook Kimano xp33',
-      description: 'Descrição do Produto 1',
+      name: 'Notebook Kimano XP33',
+      description: 'Computador portátil de fácil utilidade',
       price: 3999,
       image: '/assets/compuiter.jpg'
     },
     {
       name: 'Tênis Kimano Party Pool',
-      description: 'Descrição do Produto 2',
+      description: 'Elegante e confortável',
       price: 499,
       image: '/assets/tenis.jpg'
     },
     {
-      name: 'Fone Kimano redBan',
-      description: 'Descrição do Produto 3',
+      name: 'Fone Kimano RedBan',
+      description: 'Áudio imersivo para seu prazer auditivo',
       price: 199,
       image: '/assets/phone.jpg'
     }

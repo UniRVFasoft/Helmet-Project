@@ -43,8 +43,6 @@ import {MatListModule} from "@angular/material/list";
     TarefaComponent,
     ProdutosComponent,
     LoginComponent,
-
-    HomeComponent
   ],
   imports: [
     BrowserModule,
