@@ -44,9 +44,8 @@ import { FuncionalidadeComponent } from './funcionalidade/funcionalidade.compone
     TarefaComponent,
     ProdutosComponent,
     LoginComponent,
-
     HomeComponent,
-      FuncionalidadeComponent
+    FuncionalidadeComponent
   ],
   imports: [
     BrowserModule,

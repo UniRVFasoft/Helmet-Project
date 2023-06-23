@@ -51,10 +51,10 @@ export class TarefaComponent implements OnInit {
       data_vencimento: "11/10/2023",
       status: Status.PENDENTE,
       cliente: {
-        nome: 'Cliente example',
+        nome: 'João Smith',
         email: 'cliente1@example.com',
-        cidade: 'Cidade 1',
-        estado: 'Estado 1',
+        cidade: 'São Paulo',
+        estado: 'São Paulo',
         telefone: '123456789',
         biografia: 'Biografia do Cliente 1'
       }
