@@ -8,6 +8,7 @@ import {LoginComponent} from "./login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {NavbarComponent} from "./navbar/navbar/navbar.component";
 import {ProdutosComponent} from "./produtos/produtos.component";
+import {FuncionalidadeComponent} from "./funcionalidade/funcionalidade.component";
 
 const routes: Routes = [
 
@@ -50,7 +51,12 @@ const routes: Routes = [
       {
         path: 'navbar',
         component: NavbarComponent
+      },
+      {
+        path: 'avaliacoes',
+        component: FuncionalidadeComponent
       }
+
     ]
   }
 
