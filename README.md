@@ -21,7 +21,7 @@ Cadastro de clientes com Validações de campos
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/1c2e9e1b-63d6-4bcb-91de-b9ed1de07114)
 
 Tarefas
-![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/a8db5835-5b8f-4827-a8a8-cf7c27b3cbd1)
+![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/4d5c24fa-df5a-40a3-8988-c4afa15b20ed)
 
 Cadastro de tarefas
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/99a2f93e-00f8-49c8-b99f-a75074d2c35a)
