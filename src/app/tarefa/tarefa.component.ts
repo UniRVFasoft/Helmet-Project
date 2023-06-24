@@ -52,7 +52,7 @@ export class TarefaComponent implements OnInit {
       status: Status.PENDENTE,
       cliente: {
         nome: 'João Smith',
-        email: 'cliente1@example.com',
+        email: 'joao@email.com',
         cidade: 'São Paulo',
         estado: 'São Paulo',
         telefone: '123456789',
