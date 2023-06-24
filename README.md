@@ -2,7 +2,9 @@
 Este projeto utiliza o framework Angular com Material.
 Foi utilizado o mockApi para simulação de comunicações de API.
 Login
-email: owner@helmet.com </br> senha: kimano123
+email: owner@helmet.com </br> senha: kimano123 </br>
+
+Projeto não consegue fazer deploy(vercel) devido ao tamanho muito extenso. espero que entenda !!
 
 Telas
 
