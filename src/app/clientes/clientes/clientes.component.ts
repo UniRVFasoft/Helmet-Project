@@ -181,7 +181,6 @@ export class ClientesComponent implements OnInit, DoCheck {
     });
   }
 
-
   excluirCliente(i: number) {
     this.clientes.splice(i, 1)
     this.openSnackBar('Cliente excluido', 'Fechar', 'snackbar-error');

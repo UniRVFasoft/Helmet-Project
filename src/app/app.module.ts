@@ -29,6 +29,7 @@ import {MatCardModule} from "@angular/material/card";
 import {HomeComponent} from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatListModule} from "@angular/material/list";
+import { HistoricoclienteComponent } from './historicoclientes/historicocliente/historicocliente.component';
 import { FuncionalidadeComponent } from './funcionalidade/funcionalidade.component';
 
 
@@ -45,7 +46,8 @@ import { FuncionalidadeComponent } from './funcionalidade/funcionalidade.compone
     ProdutosComponent,
     LoginComponent,
     HomeComponent,
-    FuncionalidadeComponent
+    HistoricoclienteComponent,
+    FuncionalidadeComponent,
   ],
   imports: [
     BrowserModule,
