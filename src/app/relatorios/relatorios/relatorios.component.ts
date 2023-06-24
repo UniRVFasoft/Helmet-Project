@@ -8,55 +8,25 @@ import { Chart, ChartTypeRegistry } from 'chart.js';
 })
 export class RelatoriosComponent implements OnInit, AfterViewInit {
   topSellingProducts: any[] = [
-    { name: 'Produto A', quantity: 50 },
-    { name: 'Produto B', quantity: 40 },
-    { name: 'Produto C', quantity: 35 },
-    { name: 'Produto D', quantity: 30 },
-    { name: 'Produto E', quantity: 25 }
+    { name: 'Fone Kimano RedBan', quantity: 50 },
+    { name: 'Fone Kimano RedBan', quantity: 40 },
+    { name: 'Tênis Kimano Party Pool', quantity: 35 },
+    { name: 'Tênis Kimano Party Pool', quantity: 30 },
+    { name: 'Tênis Kimano Party Pool', quantity: 25 }
   ];
 
   newCustomers: any[] = [
-    { name: 'Cliente A', email: 'clienteA@example.com', registrationDate: new Date() },
-    { name: 'Cliente B', email: 'clienteB@example.com', registrationDate: new Date() },
-    { name: 'Cliente C', email: 'clienteC@example.com', registrationDate: new Date() },
-    { name: 'Cliente D', email: 'clienteD@example.com', registrationDate: new Date() },
-    { name: 'Cliente E', email: 'clienteE@example.com', registrationDate: new Date() }
+    { name: 'Lalisa', email: 'lalisa@email.com', registrationDate: new Date() },
+    { name: 'Carolina', email: 'carolina@email.com', registrationDate: new Date() },
+    { name: 'Renan', email: 'renan@email.com', registrationDate: new Date() },
+    { name: 'Rhanyel', email: 'rhanyel@email.com', registrationDate: new Date() },
+    { name: 'Victor', email: 'victor@email.com', registrationDate: new Date() }
   ];
 
   monthlySalesChart!: Chart<keyof ChartTypeRegistry, number[], string>; // Adição do modificador !
 
   ngOnInit() {
-    // Dados simulados para as vendas mensais
-    const monthlySalesData = [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650];
 
-    // Configuração do gráfico
-    const chartOptions = {
-      type: 'line' as const, // Alteração do tipo para a constante do ChartTypeRegistry
-      data: {
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        datasets: [
-          {
-            label: 'Vendas Mensais',
-            data: monthlySalesData,
-            backgroundColor: 'rgba(0, 123, 255, 0.3)',
-            borderColor: 'rgba(0, 123, 255, 0.7)',
-            borderWidth: 2
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    };
-
-    // Criação do gráfico
-    this.monthlySalesChart = new Chart('monthly-sales-chart', chartOptions);
   }
 
   ngAfterViewInit() {
