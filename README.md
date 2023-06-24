@@ -30,6 +30,12 @@ Produtos
 Relatorios
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/277e3885-af06-49d0-a754-d1580b8d859a)
 
+Avaliação do site
+![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/b340e950-60e2-4464-8571-c11b4f5bf22c)
+
+Informações sobre clientes
+![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/6611fda6-472d-44a0-90ba-af0f8fb126e1)
+
 Configurações
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/8468158f-1aa1-4f84-957e-85c16a80ac84)
 
@@ -44,8 +50,8 @@ Roxo
 Validação login 
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/c8a57cf5-0b99-4bdc-8709-a000f961af67)
 
-Avaliação do site
-![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/b340e950-60e2-4464-8571-c11b4f5bf22c)
+
+
 
 
 
