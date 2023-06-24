@@ -30,7 +30,7 @@ Produtos
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/f70cd16d-dee0-4378-858a-8db4f5e4b65c)
 
 Relatorios
-![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/277e3885-af06-49d0-a754-d1580b8d859a)
+![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/83b28d99-94b3-4f64-b326-6480b80c808c)
 
 Avaliação do site
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/b340e950-60e2-4464-8571-c11b4f5bf22c)
