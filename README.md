@@ -44,6 +44,10 @@ Roxo
 Validação login 
 ![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/c8a57cf5-0b99-4bdc-8709-a000f961af67)
 
+Avaliação do site
+![image](https://github.com/UniRVFasoft/Helmet-Project/assets/75391803/b340e950-60e2-4464-8571-c11b4f5bf22c)
+
+
 
 
 

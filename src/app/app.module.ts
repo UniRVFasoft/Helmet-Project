@@ -30,6 +30,7 @@ import {HomeComponent} from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatListModule} from "@angular/material/list";
 import { HistoricoclienteComponent } from './historicoclientes/historicocliente/historicocliente.component';
+import { FuncionalidadeComponent } from './funcionalidade/funcionalidade.component';
 
 
 @NgModule({
@@ -44,9 +45,9 @@ import { HistoricoclienteComponent } from './historicoclientes/historicocliente/
     TarefaComponent,
     ProdutosComponent,
     LoginComponent,
-
     HomeComponent,
-      HistoricoclienteComponent
+    HistoricoclienteComponent,
+    FuncionalidadeComponent,
   ],
   imports: [
     BrowserModule,
